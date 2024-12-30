@@ -113,7 +113,7 @@ def main():
     parser.add_argument("--N_r", type=int, default=4, help="Number of receive antennas")
     parser.add_argument("--d", type=int, default=2, help="Number of data streams")
     parser.add_argument("--user_number", type=int, default=6, help="Number of users")
-    parser.add_argument("--BS_number", type=int, default=3, help="Number of base stations")
+    parser.add_argument("--BS_number", type=int, default=1, help="Number of base stations")
     parser.add_argument("--signal_max_power", type=float, default=1e2, help="Maximum signal power")
     parser.add_argument("--noise_power", type=float, default=1e-8, help="Noise power")
     parser.add_argument("--N_samples", type=int, default=50000, help="Number of samples for training")
@@ -126,7 +126,7 @@ def main():
     parser.add_argument("--hidden_size", type=int, default=64, help="Hidden layer size of the network")
     parser.add_argument("--single_number", type=int, default=5000, help="Single number parameter")
     parser.add_argument("--record_interval", type=int, default=120)
-    parser.add_argument("--exp_name", type=str, default='Nes_multicell')
+    parser.add_argument("--exp_name", type=str, default='')
     
     # 权重数组需要单独处理
     parser.add_argument("--w", nargs='+', type=float, default=None, help="Weight array")
@@ -136,7 +136,7 @@ def main():
 
     # 如果未传入权重，则创建默认的等差权重矩阵
     if args.w is None:
-        w = [i + 1 for i in range(args.user_number)]
+        w = [ 1 for i in range(args.user_number)]
         w = [w[i] / sum(w) for i in range(args.user_number)]
     else:
         w = args.w
