@@ -17,6 +17,4 @@ class dataset(torch.utils.data.Dataset):
         return Matrix
     
 
-# 定义一个学习率更新函数
-
 
