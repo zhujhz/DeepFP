@@ -49,9 +49,9 @@
   ],
   "splits": {
     "train": {
-      "samples": 20000,
+      "samples": 40000,
       "index_file": "train_indices.npy",
-      "index_sha256": "d0671751a1b518605c7537cd1f5071653b1339b0d11c280f38c87df1016b3ac4",
+      "index_sha256": "fd2dbd0be298de43035f566b61d749ba20a248f05ad3a07d6cec0a7bb21e8138",
       "shards": [
         {
           "file": "train_000.h5",
@@ -72,6 +72,26 @@
           "file": "train_003.h5",
           "samples": 5000,
           "sha256": "c720971177721af71abb1ba2d0894d7860e00ea97eab24a4b3a4f54e3df1cd7b"
+        },
+        {
+          "file": "train_004.h5",
+          "samples": 5000,
+          "sha256": "9256ac8df49c78a040e17ffc3eaac58affea24c878d14ad6746b09ed6ea9c6f5"
+        },
+        {
+          "file": "train_005.h5",
+          "samples": 5000,
+          "sha256": "23e24ba50abb0fec23ac93ce38649a658771d0bee3fcd8fde73cb2dfbfb35356"
+        },
+        {
+          "file": "train_006.h5",
+          "samples": 5000,
+          "sha256": "d29406c1923d877e20d5dfd07ceb12cf2f8c47356aa874d53d109718f88f6fc1"
+        },
+        {
+          "file": "train_007.h5",
+          "samples": 5000,
+          "sha256": "6d29553594ed8a9d210df9af5272b065a697396af141d21234f122a7a7832b5b"
         }
       ]
     },
@@ -104,10 +124,5 @@
         }
       ]
     }
-  },
-  "github_subset": {
-    "description": "First four of eight original training shards are included; validation and test are complete.",
-    "original_train_samples": 40000,
-    "included_train_samples": 20000
   }
 }
