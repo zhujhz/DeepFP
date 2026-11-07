@@ -10,9 +10,11 @@ Both demos use transmit power 100 and code noise power `1e-8`.
 | Single cell | `Data/single_cell/` | `train_singlecell.py` | `test_singlecell.py` | `models/single_cell/`, `results/single_cell/` |
 | Three cells | `Data/three_cell/` | `train_threecell.py` | `test_threecell.py` | `models/three_cell/`, `results/three_cell/` |
 
-This code repository does not include the large channel datasets or trained
-checkpoints. Place prepared HDF5 data in the corresponding `Data/` folders,
-or generate it as described below, then train before testing.
+Trained checkpoints are included in `models/single_cell/` and
+`models/three_cell/`. The default test scripts load `deepfp_hybrid_best.pth`
+from the corresponding folder. The large channel datasets are not yet included.
+Place prepared HDF5 data in the corresponding `Data/` folders or generate it
+as described below before testing or retraining.
 
 ## Install
 
