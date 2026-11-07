@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+models/single_cell_smoke/
+models/three_cell_smoke/
+results/single_cell/smoke.*
+results/three_cell/smoke.*
