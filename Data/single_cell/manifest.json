@@ -1,0 +1,67 @@
+{
+  "shape_convention": "(samples, receiver_BS, transmitter_BS, users, Nr, Nt)",
+  "dtype": "complex128",
+  "splits": {
+    "train": {
+      "file": "train.h5",
+      "samples": 35000,
+      "source_files": [
+        {
+          "name": "1_5000_Nr_4_Nt_64_N_user_6_BS_1.mat",
+          "sha256": "543dda9869cc9413475e62e15305cc4c3d6fe3243f14c343a71cc2857baef867"
+        },
+        {
+          "name": "2_5000_Nr_4_Nt_64_N_user_6_BS_1.mat",
+          "sha256": "b59b01079067f8e50fa0c09f26af8b7f27fcc008798994a74d0d6279950346b3"
+        },
+        {
+          "name": "3_5000_Nr_4_Nt_64_N_user_6_BS_1.mat",
+          "sha256": "8cb2d91a64c55332af18e6b405cab386302b43864f2def0c32630c45a283a529"
+        },
+        {
+          "name": "4_5000_Nr_4_Nt_64_N_user_6_BS_1.mat",
+          "sha256": "8e0c6951c4a48833ec2740d0ae17392e7f8a3853e330949b5faf2be26600bc17"
+        },
+        {
+          "name": "5_5000_Nr_4_Nt_64_N_user_6_BS_1.mat",
+          "sha256": "a7a601f0ee936708981caa824e889abfea07e3e8a8101b296918bb2776a6de7b"
+        },
+        {
+          "name": "6_5000_Nr_4_Nt_64_N_user_6_BS_1.mat",
+          "sha256": "99a063b999ea6f119a15bab9043d7f394ddf2bebdb0df1ee5ba9cb6a335efb72"
+        },
+        {
+          "name": "7_5000_Nr_4_Nt_64_N_user_6_BS_1.mat",
+          "sha256": "8f04ea6920fb11008f0d9119e581a8245ea4b006064d5d2b8dd0aec8fd33ec1a"
+        }
+      ],
+      "sha256": "0897e436a16c30e3d4e0036abd293a8287105a4a222b8e22772d6da308df3cd1"
+    },
+    "validation": {
+      "file": "validation.h5",
+      "samples": 500,
+      "source_files": [
+        {
+          "name": "8_5000_Nr_4_Nt_64_N_user_6_BS_1.mat",
+          "sha256": "7434b4e8ac0c3c7fb580dad076c6dee5f199a771d3989bc3c9001e07194387b2"
+        }
+      ],
+      "sha256": "de8d8759ed7e60a37ef83254189f437799d2d6a73cf9cd1e35ed915866ea9639"
+    },
+    "test": {
+      "file": "test.h5",
+      "samples": 10000,
+      "source_files": [
+        {
+          "name": "9_5000_Nr_4_Nt_64_N_user_6_BS_1.mat",
+          "sha256": "ed84492fb6f10e89b51915d79daba2823ac9830558ed4284febe889d19482db1"
+        },
+        {
+          "name": "10_5000_Nr_4_Nt_64_N_user_6_BS_1.mat",
+          "sha256": "1844b9be734288930a54523e568e7b7d936939623379749d54dbb5295b6ce50f"
+        }
+      ],
+      "sha256": "976cfde15f511ad74a4706f6dddadefc35e69dff315c1663f556f4660ac9f3a8"
+    }
+  }
+}

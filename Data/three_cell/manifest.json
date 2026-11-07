@@ -1,0 +1,113 @@
+{
+  "seed": 20261104,
+  "source_total": 50000,
+  "shape_convention": "(samples, receiving_BS, transmitting_BS, users, Nr, Nt)",
+  "dtype": "complex128",
+  "shard_size": 5000,
+  "split_method": "torch.randperm then split_matrix(train_size=0.8)",
+  "source_files": [
+    {
+      "file": "1_5000_Nr_4_Nt_64_N_user_6_BS_3.mat",
+      "sha256": "69fc7398f05cd47d3896f466af5f6b1c5a6f94116b178238ea077c24670ab824"
+    },
+    {
+      "file": "2_5000_Nr_4_Nt_64_N_user_6_BS_3.mat",
+      "sha256": "addef9fb68a3e6e589a194e9d4665b899c2b2f39e9d524f639dbf2f7340bf7c2"
+    },
+    {
+      "file": "3_5000_Nr_4_Nt_64_N_user_6_BS_3.mat",
+      "sha256": "3c9a0d71f1e1bc8380cae710fa71a5b68a7c5276e7b53b2d57244aaaf6f5f549"
+    },
+    {
+      "file": "4_5000_Nr_4_Nt_64_N_user_6_BS_3.mat",
+      "sha256": "b837a6955793bf745481e7b649c7edb0faee3e1270791003fb13267ed567a7eb"
+    },
+    {
+      "file": "5_5000_Nr_4_Nt_64_N_user_6_BS_3.mat",
+      "sha256": "792e8f72ca77accc73b583acdad834205e6fe9b7f4524a1fda9760fdc5a98b27"
+    },
+    {
+      "file": "6_5000_Nr_4_Nt_64_N_user_6_BS_3.mat",
+      "sha256": "55c8c5a42d7ab010f79a94390e68552a5eae05f6625c3c7e5e28bb0fcdacf0ed"
+    },
+    {
+      "file": "7_5000_Nr_4_Nt_64_N_user_6_BS_3.mat",
+      "sha256": "f086e293c3f72698b5a02554972dc8095bb701215a7d5bec8dacde3b60405949"
+    },
+    {
+      "file": "8_5000_Nr_4_Nt_64_N_user_6_BS_3.mat",
+      "sha256": "2a748a7d6a1f9623b494bdfd7630c5e446c51e771f22e70afad8b9a947ca09fb"
+    },
+    {
+      "file": "9_5000_Nr_4_Nt_64_N_user_6_BS_3.mat",
+      "sha256": "29f2a70f43b6742b5ef53af70b7a8e02cad26125b31c08ac252ef6851a8e985d"
+    },
+    {
+      "file": "10_5000_Nr_4_Nt_64_N_user_6_BS_3.mat",
+      "sha256": "cec34b4ed8069ceffc8f00e7b1b6004d20fdcb12db00cc60c40408aab48a96a3"
+    }
+  ],
+  "splits": {
+    "train": {
+      "samples": 20000,
+      "index_file": "train_indices.npy",
+      "index_sha256": "d0671751a1b518605c7537cd1f5071653b1339b0d11c280f38c87df1016b3ac4",
+      "shards": [
+        {
+          "file": "train_000.h5",
+          "samples": 5000,
+          "sha256": "bdcc50285b15a3a372b69defe7f544a5fee64e5bde55f7817600d51391ebc814"
+        },
+        {
+          "file": "train_001.h5",
+          "samples": 5000,
+          "sha256": "e774831eaa94fcf9f78aea13bf354a251620154e826acbe6e1203458d0c752cf"
+        },
+        {
+          "file": "train_002.h5",
+          "samples": 5000,
+          "sha256": "d3b6e0e38f392ca6c3d9ab704ed3bae31d7dce5a46e0723976eb86352cc8c231"
+        },
+        {
+          "file": "train_003.h5",
+          "samples": 5000,
+          "sha256": "c720971177721af71abb1ba2d0894d7860e00ea97eab24a4b3a4f54e3df1cd7b"
+        }
+      ]
+    },
+    "validation": {
+      "samples": 4999,
+      "index_file": "validation_indices.npy",
+      "index_sha256": "ba4d5605fb1f09f2d5bff47c6a9a39e9eb552ab7a8eed2d7963589d631717237",
+      "shards": [
+        {
+          "file": "validation_000.h5",
+          "samples": 4999,
+          "sha256": "fc5ad4af0f4b9058f2b7693cdc5981582a4179adfbd2a1fbe4e0b78f468f266a"
+        }
+      ]
+    },
+    "test": {
+      "samples": 5001,
+      "index_file": "test_indices.npy",
+      "index_sha256": "72d2fc2fa7d099e2f208b4154b6c9c8775ddebbbe040dcc73365d06b472d11eb",
+      "shards": [
+        {
+          "file": "test_000.h5",
+          "samples": 5000,
+          "sha256": "736737b85ae95a454c068d10065f1cd10ef3c77c0545f094f63ba7cbcef1f459"
+        },
+        {
+          "file": "test_001.h5",
+          "samples": 1,
+          "sha256": "0a7f5b658623ab3a021a3a81add850fe6ac150ac28596f00e5c801cf57385375"
+        }
+      ]
+    }
+  },
+  "github_subset": {
+    "description": "First four of eight original training shards are included; validation and test are complete.",
+    "original_train_samples": 40000,
+    "included_train_samples": 20000
+  }
+}
