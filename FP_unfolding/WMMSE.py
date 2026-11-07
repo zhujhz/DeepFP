@@ -69,50 +69,13 @@ class WMMSE(nn.Module):
         for k in range(user_number):
             V[:,l,k,:,:]=w[k]*torch.linalg.inv(_temp_Matrix[:,0,0,:,:])@H[:,l,l,k,:,:].mH@Y[:,l,k,:,:]@W[:,l,k,:,:]
 
-        # def compute_V_power(u):
-        #     # for k in range(user_number):
-        #     _temp_Matrix=u*torch.eye(N_t, dtype=torch.cdouble).unsqueeze(0).unsqueeze(0).unsqueeze(0).to(device)
-        #     for idx_BS in range(BS_number):
-        #         for idx_user in range(user_number):
-        #             _temp_Matrix[n,0,0,:,:]+=w[idx_user]*H[n,l,idx_BS,idx_user,:,:].mH@Y[n,idx_BS,idx_user,:,:]@W[n,idx_BS,idx_user,:,:]@Y[n,idx_BS,idx_user,:].mH@H[n,l,idx_BS,idx_user,:,:]
-            
-        #     for k in range(user_number):
-        #         V[n,l,k,:,:]=w[k]*torch.linalg.inv(_temp_Matrix)@H[n,l,l,k,:,:].mH@Y[n,l,k,:,:]@W[n,l,k,:,:]
-        #     #检查功率
-        #     frobenius_norm_squared=torch.linalg.norm(V, ord='fro', dim=(-2, -1))**2
-        #     frobenius_norm_squared=frobenius_norm_squared.sum(dim=2) #所有用户的总功率
-
-        #     return frobenius_norm_squared
-
-
-        # for n in range(N_samples):
-        #     #正是由于每个样本都要进行二分法 WMMSE不适合多样本并行
-        #     for l in range(BS_number):
-        #         frobenius_norm_squared=compute_V_power(0)
-        #         if not frobenius_norm_squared[n,l]>signal_max_power:
-        #             continue
-
-        #         low,high=0,10000
-
-        #         while True:
-        #             u=(low+high)/2
-        #             frobenius_norm_squared=compute_V_power(u)
-
-        #             if abs(frobenius_norm_squared[n,l]-signal_max_power)<1e-4:
-        #                break
-
-        #             if frobenius_norm_squared[n,l]<signal_max_power:
-        #                 high=u
-        #             else:
-        #                 low=u
-
         return V
 
     def single_iteration(self,H,V_last,w,signal_max_power=1e2,noise_power=1e-7):
         device=H.device
 
         Z=V_last.clone()
-        d=V_last.size(-1)#数据流数
+        d=V_last.size(-1)
 
         N_samples,BS_number,_,user_number,N_r,N_t=H.size()
 

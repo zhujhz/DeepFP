@@ -118,7 +118,7 @@ class FastFPnet(nn.Module):
         Input=torch.cat((Z1,Z2),dim=-1)
         Output=block(Input)
 
-        Output=Output.real #先考虑不消除复数
+        Output=Output.real 
 
         return Output
     
@@ -272,7 +272,6 @@ class FastFPnet(nn.Module):
         
         if signal_max_power is None:
             signal_max_power=self.signal_max_power
-
 
         V=torch.randn(N_samples,BS_number,user_number,N_t,stream_num,dtype=torch.cdouble)
         frobenius_norm_squared = torch.linalg.norm(V, ord='fro', dim=(-2, -1))**2

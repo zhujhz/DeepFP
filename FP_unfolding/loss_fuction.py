@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 
 from FP_unfolding.compute_WSR import WSR
-from FP_unfolding.FastFP_alg_n import FastFP
+from FP_unfolding.FastFP_alg import FastFP
 
 
 class ComplexMSELoss(nn.Module):
