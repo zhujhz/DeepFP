@@ -1,0 +1,45 @@
+{
+  "data_dir": "C:\\Users\\16141\\Documents\\DeepFP\\Data\\three_cell",
+  "checkpoint": "C:\\Users\\16141\\Documents\\DeepFP\\models\\three_cell\\deepfp_hybrid_best.pth",
+  "samples": 50,
+  "device": "cuda:0",
+  "batch_size": 10,
+  "fastfp_iterations": 30,
+  "wmmse_iterations": 30,
+  "wmmse_entry_point": "WMMSE.single_iteration (per sample)",
+  "seed": 20261105,
+  "weights": [
+    0.047619047619047616,
+    0.09523809523809523,
+    0.14285714285714285,
+    0.19047619047619047,
+    0.23809523809523808,
+    0.2857142857142857
+  ],
+  "power": 100,
+  "noise": 1e-08,
+  "score_scale": 1,
+  "summary": {
+    "DeepFP": {
+      "mean_wsr": 6.96854754822948,
+      "std_wsr": 1.8867133671053935,
+      "mean_max_cell_power": 100.0,
+      "max_cell_power": 100.00000000000003,
+      "algorithm_seconds": 1.9197431998327374
+    },
+    "FastFP": {
+      "mean_wsr": 6.769058251539888,
+      "std_wsr": 1.6922994856730356,
+      "mean_max_cell_power": 100.0,
+      "max_cell_power": 100.00000000000004,
+      "algorithm_seconds": 15.522976499982178
+    },
+    "WMMSE": {
+      "mean_wsr": 7.371079460648384,
+      "std_wsr": 2.033282100540999,
+      "mean_max_cell_power": 99.99999821624988,
+      "max_cell_power": 100.00000000000003,
+      "algorithm_seconds": 1255.8050576999085
+    }
+  }
+}
